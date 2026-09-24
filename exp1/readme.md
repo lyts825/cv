@@ -24,7 +24,7 @@
 
 ### 3.验证 Scikit-learn：
 
-<p style="text-indent: 2em;">导入 Scikit-learn，生成一个小型分类数据集并训练逻辑回归模型，通过训练集准确率确认机器学习模块可以正常调用。</p>
+<p style="text-indent: 2em;">导入 Scikit-learn，使用固定随机种子 <code>3</code> 生成 40 个样本并训练逻辑回归模型，通过训练集准确率确认机器学习模块可以正常调用。</p>
 
 ![Scikit-learn 验证结果截图](assets/03_sklearn_verification.png)
 
