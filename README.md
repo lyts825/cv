@@ -14,4 +14,4 @@
 
 ![综合验证结果截图](exp1/assets/04_all_packages_verification.png)
 
-详细实验过程与分析见 [实验一说明](exp1/readme.md)。截图由实际运行 `exp1/verify_environment.py` 的输出生成，可用 `python exp1/capture_screenshots.py` 重新生成。
+详细实验过程与分析见 [实验一说明](exp1/readme.md)。验证结果以 PNG 图片形式展示。
