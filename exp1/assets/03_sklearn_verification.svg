@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">Scikit-learn 验证结果摘要</title>
+  <desc id="desc">根据实验说明整理：Scikit-learn 1.9.0，生成 40 个样本，逻辑回归训练集准确率为 0.925。</desc>
+  <rect width="1200" height="430" rx="28" fill="#f1f5f9"/>
+  <rect x="24" y="24" width="1152" height="382" rx="22" fill="#ffffff" stroke="#dbe4ee" stroke-width="2"/>
+  <text x="64" y="78" fill="#64748b" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="17" font-weight="700" letter-spacing="2">CV ENVIRONMENT CHECK</text>
+  <text x="64" y="128" fill="#0f172a" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="34" font-weight="700">Scikit-learn 验证结果摘要</text>
+  <text x="64" y="160" fill="#64748b" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="17">根据实验说明中记录的输出整理</text>
+  <rect x="1010" y="52" width="112" height="42" rx="21" fill="#dcfce7"/>
+  <circle cx="1034" cy="73" r="6" fill="#16a34a"/>
+  <text x="1050" y="80" fill="#166534" font-family="Segoe UI, sans-serif" font-size="17" font-weight="700">PASS</text>
+  <g font-family="Segoe UI, Microsoft YaHei, sans-serif">
+    <rect x="64" y="194" width="330" height="132" rx="16" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="88" y="230" fill="#64748b" font-size="16">版本</text>
+    <text x="88" y="278" fill="#0f172a" font-size="30" font-weight="700">1.9.0</text>
+    <rect x="435" y="194" width="330" height="132" rx="16" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="459" y="230" fill="#64748b" font-size="16">生成样本</text>
+    <text x="459" y="278" fill="#0f172a" font-size="32" font-weight="700">40 个</text>
+    <rect x="806" y="194" width="330" height="132" rx="16" fill="#f0fdf4" stroke="#bbf7d0"/>
+    <text x="830" y="230" fill="#64748b" font-size="16">逻辑回归训练集准确率</text>
+    <text x="830" y="278" fill="#15803d" font-size="32" font-weight="700">0.925</text>
+  </g>
+  <text x="64" y="370" fill="#475569" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="17">分类数据生成成功 · 模型训练成功 · 准确率计算成功</text>
+</svg>

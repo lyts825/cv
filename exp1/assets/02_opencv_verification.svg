@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">OpenCV 验证结果摘要</title>
+  <desc id="desc">根据实验说明整理：OpenCV 4.13.0，输入图像 64×64×3，灰度图 64×64，矩形绘制产生非零像素。</desc>
+  <rect width="1200" height="430" rx="28" fill="#f1f5f9"/>
+  <rect x="24" y="24" width="1152" height="382" rx="22" fill="#ffffff" stroke="#dbe4ee" stroke-width="2"/>
+  <text x="64" y="78" fill="#64748b" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="17" font-weight="700" letter-spacing="2">CV ENVIRONMENT CHECK</text>
+  <text x="64" y="128" fill="#0f172a" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="34" font-weight="700">OpenCV 验证结果摘要</text>
+  <text x="64" y="160" fill="#64748b" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="17">根据实验说明中记录的输出整理</text>
+  <rect x="1010" y="52" width="112" height="42" rx="21" fill="#dcfce7"/>
+  <circle cx="1034" cy="73" r="6" fill="#16a34a"/>
+  <text x="1050" y="80" fill="#166534" font-family="Segoe UI, sans-serif" font-size="17" font-weight="700">PASS</text>
+  <g font-family="Segoe UI, Microsoft YaHei, sans-serif">
+    <rect x="64" y="194" width="250" height="132" rx="16" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="88" y="230" fill="#64748b" font-size="16">OpenCV 版本</text>
+    <text x="88" y="278" fill="#0f172a" font-size="30" font-weight="700">4.13.0</text>
+    <rect x="338" y="194" width="250" height="132" rx="16" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="362" y="230" fill="#64748b" font-size="16">彩色图像</text>
+    <text x="362" y="278" fill="#0f172a" font-size="27" font-weight="700">64 × 64 × 3</text>
+    <rect x="612" y="194" width="250" height="132" rx="16" fill="#f8fafc" stroke="#e2e8f0"/>
+    <text x="636" y="230" fill="#64748b" font-size="16">灰度图像</text>
+    <text x="636" y="278" fill="#0f172a" font-size="27" font-weight="700">64 × 64</text>
+    <rect x="886" y="194" width="250" height="132" rx="16" fill="#f0fdf4" stroke="#bbf7d0"/>
+    <text x="910" y="230" fill="#64748b" font-size="16">矩形绘制</text>
+    <text x="910" y="278" fill="#15803d" font-size="24" font-weight="700">非零像素</text>
+  </g>
+  <text x="64" y="370" fill="#475569" font-family="Segoe UI, Microsoft YaHei, sans-serif" font-size="17">图像创建成功 · 矩形绘制成功 · 灰度转换成功</text>
+</svg>
