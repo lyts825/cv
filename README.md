@@ -2,8 +2,6 @@
 
 本仓库记录计算机视觉实验内容。
 
-当前版本：`0.1.1`。版本记录见 [CHANGELOG.md](CHANGELOG.md)。
-
 ## 实验一：开发库环境验证
 
 检查 PyTorch、OpenCV 和 Scikit-learn 的导入及基础功能。以下是实验文档中结果的可视化摘要：
