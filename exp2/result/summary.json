@@ -1,0 +1,122 @@
+{
+  "input": {
+    "file": "input.jpg",
+    "sha256": "2b95ae0366396876b40dae73acf5477ff7a1b1adaa38cc6f13d5588a43c9a635",
+    "width": 1080,
+    "height": 1578,
+    "channels": 3,
+    "dtype": "uint8",
+    "pixel_row_col": [
+      100,
+      100
+    ],
+    "pixel_bgr": [
+      111,
+      132,
+      123
+    ],
+    "pixel_rgb": [
+      123,
+      132,
+      111
+    ],
+    "pixel_gray": 127
+  },
+  "parameters": {
+    "seed_salt_pepper": 2026,
+    "seed_gaussian": 2027,
+    "salt_pepper_amount": 0.4,
+    "salt_vs_pepper": 0.5,
+    "gaussian_mean": 0.2,
+    "gaussian_variance": 0.03,
+    "kernel_size": 5,
+    "gaussian_sigma": 0,
+    "border": "BORDER_REPLICATE",
+    "quantization": "round_to_nearest_uint8"
+  },
+  "noise_observations": {
+    "salt_pepper_changed_channel_fraction": 0.3892833951399646,
+    "salt_pepper_changed_pixel_fraction": 0.7691328686100549,
+    "gaussian_upper_clipped_channel_fraction": 0.33235381558153,
+    "gaussian_lower_clipped_channel_fraction": 0.0001445414573847189
+  },
+  "versions": {
+    "numpy": "2.4.4",
+    "opencv": "4.13.0",
+    "matplotlib": "3.10.8",
+    "scikit_image": "0.26.0"
+  },
+  "metrics": [
+    {
+      "noise": "salt_pepper",
+      "method": "noisy",
+      "mse": 8404.614024433178,
+      "psnr_db": 8.88562587281336,
+      "ssim": 0.018456756888732936,
+      "mean_error": -17.913474432396065
+    },
+    {
+      "noise": "salt_pepper",
+      "method": "mean",
+      "mse": 1094.9948154798228,
+      "psnr_db": 17.736682979601152,
+      "ssim": 0.2703887809155246,
+      "mean_error": -17.91375099751209
+    },
+    {
+      "noise": "salt_pepper",
+      "method": "median",
+      "mse": 49.09282397627877,
+      "psnr_db": 31.220623460416217,
+      "ssim": 0.8818686272367718,
+      "mean_error": 0.09924130404168427
+    },
+    {
+      "noise": "salt_pepper",
+      "method": "gaussian",
+      "mse": 1351.56136596567,
+      "psnr_db": 16.822445917837896,
+      "ssim": 0.17127425915975558,
+      "mean_error": -17.916362523275282
+    },
+    {
+      "noise": "gaussian",
+      "method": "noisy",
+      "mse": 2773.4968740709446,
+      "psnr_db": 13.700526801336778,
+      "ssim": 0.15283005457903828,
+      "mean_error": 36.373909777965544
+    },
+    {
+      "noise": "gaussian",
+      "method": "mean",
+      "mse": 1709.1388507487209,
+      "psnr_db": 15.803030145518346,
+      "ssim": 0.6316097998216684,
+      "mean_error": 36.37443963291555
+    },
+    {
+      "noise": "gaussian",
+      "method": "median",
+      "mse": 2122.3566762897244,
+      "psnr_db": 14.862619890653042,
+      "ssim": 0.5494221297051157,
+      "mean_error": 41.479628456086
+    },
+    {
+      "noise": "gaussian",
+      "method": "gaussian",
+      "mse": 1738.980451305763,
+      "psnr_db": 15.727856609455628,
+      "ssim": 0.5376409432764696,
+      "mean_error": 36.37777640864354
+    }
+  ],
+  "validation": {
+    "bgr_rgb_roundtrip": true,
+    "manual_matches_opencv": true,
+    "manual_max_abs_difference": 0,
+    "manual_different_channel_values": 0,
+    "output_shape_preserved": true
+  }
+}
