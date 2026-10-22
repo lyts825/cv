@@ -166,39 +166,3 @@ MAE（Mean Absolute Error，平均绝对误差）在内缩后的有效重叠区�
 ![四组实验总览](result/overview.png)
 
 各组完整拼接图：[重叠裁剪](result/panorama_baseline.png)、[尺寸变化](result/panorama_scale.png)、[亮度变化](result/panorama_brightness.png) 和 [透视变化](result/panorama_perspective.png)。完整数据见 [metrics.csv](result/metrics.csv) 和 [summary.json](result/summary.json)。
-
-## 验证与适用范围
-
-脚本完成四组实验，五项内置检查均通过：各组至少有 4 对内点，内点率超过 80%，角点 RMSE 和内点 RMSE 均低于 `2 px`，亮度组补偿后的重叠 MAE 下降。这些阈值只用于本次合成实验，其他图像需单独检验。
-
-Notebook 格式校验通过，从 `exp3` 目录顺序执行全部 9 个代码单元也通过。附件与所保存原图的 SHA-256 一致。精确重建、黑色内容像素保留、负坐标画布和空白图报错检查均通过，`pip check` 未发现依赖冲突。
-
-执行副本和本地验证材料保存在 Git 忽略目录 `.local/`。正式 Notebook 保留源码，结果图单独保存。
-
-两幅视图来自同一张插画，重叠内容一致。真实照片中的视差、镜头畸变、局部光照变化和动态物体需要另行验证。羽化无法消除几何错位，整幅拼接图的质量也需结合重叠 MAE 以外的证据判断。
-
-本次运行环境为 Python `3.12.10`、OpenCV `4.13.0`、NumPy `2.4.4` 和 Matplotlib `3.10.8`。锁定安装版本见 [requirements.txt](requirements.txt)。
-
-## 运行方法
-
-在仓库根目录执行以下命令（Python 3.12，Windows PowerShell）。已有 `.venv` 时，可跳过创建环境。
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r exp3/requirements.txt
-.\.venv\Scripts\python.exe exp3/experiment.py
-```
-
-默认输入为 `exp3/assets/input.jpg`，派生视图写入 `exp3/img/`，结果写入 `exp3/result/`。自定义参数示例：
-
-```powershell
-.\.venv\Scripts\python.exe exp3/experiment.py --input exp3/assets/input.jpg --output exp3/result --long-edge 1800 --seed 2026
-```
-
-也可以从仓库根目录或 `exp3` 目录打开 [code.ipynb](code.ipynb)，选择 `.venv` 内核，依次运行单元格。Notebook 与脚本使用相同的算法代码，运行时会重新生成结果。
-
-## 版本记录
-
-`v0.1.1 → v0.2.0`（2026-10-22）：新增实验三源码、Notebook、用户原图、派生视图和四组实验结果，保留前两次实验入口。变更为兼容新增；脚本和 Notebook 验收通过。已知限制为单图模拟与透视画布空白，对应提交以 Git 标签 `v0.2.0` 定位。
-
-`v0.2.0 → v0.2.1`（2026-10-22）：润色实验报告、Notebook 说明和仓库中的实验三介绍，精简重复表述，明确指标定义与适用范围。代码、实测数据和结论保持不变；文档差异与内容一致性检查通过。实验运行记录仍对应 `v0.2.0`，文档修订提交以 Git 标签 `v0.2.1` 定位。
