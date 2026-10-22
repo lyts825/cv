@@ -36,3 +36,23 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r exp2/requirements.txt
 .\.venv\Scripts\python.exe exp2/experiment.py
 ```
+
+## 实验三：图像关键点检测及图像拼接
+
+使用用户提供的 `3268×5765` 插画，构造重叠视图，并模拟尺寸、亮度和透视变化。实验使用 SIFT 检测关键点，经过 FLANN 匹配和 RANSAC 单应估计后，完成亮度补偿与羽化拼接。
+
+![四组关键点匹配与图像拼接结果](exp3/result/overview.png)
+
+四组实验的角点 RMSE 均低于 `0.33 px`。亮度变化组的重叠 MAE 从 `38.147` 降至 `0.270`。这些结果来自同图模拟视图，适用范围见报告。
+
+- [实验三报告](exp3/readme.md)
+- [实验 Notebook](exp3/code.ipynb)
+- [可运行源码](exp3/experiment.py)
+- [实验指标](exp3/result/metrics.csv)
+
+在仓库根目录运行（复用前文创建的 `.venv`）：
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r exp3/requirements.txt
+.\.venv\Scripts\python.exe exp3/experiment.py
+```

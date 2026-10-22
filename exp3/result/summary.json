@@ -1,0 +1,362 @@
+{
+  "version": "0.2.0",
+  "experiment_date": "2026-10-22",
+  "reference": {
+    "url": "https://github.com/Guyudong1/CV_exp/tree/main/3rd.exp",
+    "commit": "68ae1f5fa7cbb6b1cf96a981f35f46681357975d"
+  },
+  "input": {
+    "file": "input.jpg",
+    "sha256": "905a690ee8e2152287567bafb9b397be4b7c733af72f464d2af1708f1d7dd7c6",
+    "width": 3268,
+    "height": 5765,
+    "working_width": 1020,
+    "working_height": 1800,
+    "crop_a_xyxy": [
+      0,
+      0,
+      734,
+      1800
+    ],
+    "crop_b_xyxy": [
+      286,
+      0,
+      1020,
+      1800
+    ],
+    "overlap_width": 448,
+    "overlap_fraction_of_a": 0.6103542234332425
+  },
+  "parameters": {
+    "seed": 2026,
+    "case_seeds": [
+      2026,
+      2027,
+      2028,
+      2029
+    ],
+    "long_edge": 1800,
+    "ratio_threshold": 0.7,
+    "ransac_threshold_px": 5.0,
+    "flann_trees": 5,
+    "flann_checks": 50,
+    "scale_b": 0.75,
+    "brightness_alpha": 0.72,
+    "brightness_beta": 12,
+    "exposure_model": "per-channel robust affine fit on overlap",
+    "blend": "distance-transform feather",
+    "opencv_threads": 1
+  },
+  "versions": {
+    "python": "3.12.10",
+    "opencv": "4.13.0",
+    "numpy": "2.4.4",
+    "matplotlib": "3.10.8"
+  },
+  "cases": [
+    {
+      "id": "baseline",
+      "label": "重叠裁剪",
+      "description": "A=左侧72%，B=右侧72%；重叠为工作图宽度的约44%。",
+      "width_a": 734,
+      "height_a": 1800,
+      "width_b": 734,
+      "height_b": 1800,
+      "keypoints_a": 1866,
+      "keypoints_b": 1889,
+      "knn_pairs": 1866,
+      "good_matches": 1159,
+      "inliers": 1135,
+      "inlier_ratio": 0.9792924935289042,
+      "inlier_rmse_px": 0.11510625860940796,
+      "corner_rmse_px": 0.017386769153224183,
+      "homography_b_to_a": [
+        [
+          0.9999898294672465,
+          -1.2627836222925768e-05,
+          286.0077024411185
+        ],
+        [
+          -1.4652271249239815e-05,
+          1.000008528639503,
+          -0.002320615513951803
+        ],
+        [
+          -1.9771403686197224e-08,
+          4.3413331588518484e-09,
+          1.0
+        ]
+      ],
+      "expected_homography_b_to_a": [
+        [
+          1.0,
+          0.0,
+          286.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "panorama_width": 1021,
+      "panorama_height": 1802,
+      "overlap_pixels": 797424,
+      "overlap_mae_raw": 0.004135817331808423,
+      "overlap_mae_corrected": 0.004135817331808423,
+      "exposure_gain_bgr": [
+        1.0000285249517673,
+        1.0000220427716924,
+        1.0000201814897696
+      ],
+      "exposure_bias_bgr": [
+        -0.0055471454027625836,
+        -0.004187539216040426,
+        -0.003965207924291524
+      ],
+      "bounds_xyxy": [
+        0,
+        -1,
+        1020,
+        1800
+      ],
+      "displayed_inlier_matches": 80
+    },
+    {
+      "id": "scale",
+      "label": "尺寸变化",
+      "description": "仅将 B 的宽高缩至75%，保留 A 的尺寸。",
+      "width_a": 734,
+      "height_a": 1800,
+      "width_b": 550,
+      "height_b": 1350,
+      "keypoints_a": 1866,
+      "keypoints_b": 1387,
+      "knn_pairs": 1866,
+      "good_matches": 548,
+      "inliers": 524,
+      "inlier_ratio": 0.9562043795620438,
+      "inlier_rmse_px": 0.5147896977143078,
+      "corner_rmse_px": 0.32731579905685887,
+      "homography_b_to_a": [
+        [
+          1.3345374710266675,
+          0.000225570985803439,
+          286.01417082889014
+        ],
+        [
+          -0.0001847665000265721,
+          1.3339331200243143,
+          -0.08391681513737784
+        ],
+        [
+          -2.5660424242786333e-07,
+          3.7632062802779917e-07,
+          1.0
+        ]
+      ],
+      "expected_homography_b_to_a": [
+        [
+          1.3345454545454547,
+          0.0,
+          286.16727272727275
+        ],
+        [
+          0.0,
+          1.3333333333333333,
+          0.16666666666666666
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "panorama_width": 1020,
+      "panorama_height": 1801,
+      "overlap_pixels": 795257,
+      "overlap_mae_raw": 1.4372825388522201,
+      "overlap_mae_corrected": 1.4372825388522201,
+      "exposure_gain_bgr": [
+        1.0007559687459888,
+        1.0006684609960939,
+        1.0007458134040108
+      ],
+      "exposure_bias_bgr": [
+        -0.06459665485258462,
+        -0.0643835047591204,
+        -0.08826017112307351
+      ],
+      "bounds_xyxy": [
+        0,
+        -1,
+        1019,
+        1799
+      ],
+      "displayed_inlier_matches": 80
+    },
+    {
+      "id": "brightness",
+      "label": "亮度变化",
+      "description": "仅将 B 变为 round(0.72*B+12)，逐通道裁剪到[0,255]。",
+      "width_a": 734,
+      "height_a": 1800,
+      "width_b": 734,
+      "height_b": 1800,
+      "keypoints_a": 1866,
+      "keypoints_b": 1308,
+      "knn_pairs": 1866,
+      "good_matches": 751,
+      "inliers": 715,
+      "inlier_ratio": 0.952063914780293,
+      "inlier_rmse_px": 0.1927822839085353,
+      "corner_rmse_px": 0.04758456562372943,
+      "homography_b_to_a": [
+        [
+          0.9999538890526133,
+          -2.935913990446926e-05,
+          286.01273780254934
+        ],
+        [
+          -5.178348796895307e-05,
+          0.9999597707424488,
+          0.020135766721707183
+        ],
+        [
+          -8.706733326281865e-08,
+          -1.3850528397238315e-08,
+          1.0
+        ]
+      ],
+      "expected_homography_b_to_a": [
+        [
+          1.0,
+          0.0,
+          286.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "panorama_width": 1021,
+      "panorama_height": 1802,
+      "overlap_pixels": 797336,
+      "overlap_mae_raw": 38.14738537663754,
+      "overlap_mae_corrected": 0.26951540295851856,
+      "exposure_gain_bgr": [
+        1.389563235423274,
+        1.3901041415727096,
+        1.3885190772208704
+      ],
+      "exposure_bias_bgr": [
+        -16.735797066514003,
+        -16.788886419929625,
+        -16.615670767274377
+      ],
+      "bounds_xyxy": [
+        0,
+        -1,
+        1020,
+        1800
+      ],
+      "displayed_inlier_matches": 80
+    },
+    {
+      "id": "perspective",
+      "label": "透视变化",
+      "description": "对 B 施加已知四角透视变换，黑色填充由有效掩膜排除。",
+      "width_a": 734,
+      "height_a": 1800,
+      "width_b": 734,
+      "height_b": 1800,
+      "keypoints_a": 1866,
+      "keypoints_b": 1928,
+      "knn_pairs": 1866,
+      "good_matches": 732,
+      "inliers": 704,
+      "inlier_ratio": 0.9617486338797814,
+      "inlier_rmse_px": 0.4948454241904153,
+      "corner_rmse_px": 0.292122575411429,
+      "homography_b_to_a": [
+        [
+          1.0767209746973025,
+          0.023342909903288207,
+          249.83043686120894
+        ],
+        [
+          0.0719945236710677,
+          1.0939291744168138,
+          -51.51319919336292
+        ],
+        [
+          -3.557865198718507e-06,
+          3.406389687620764e-05,
+          1.0
+        ]
+      ],
+      "expected_homography_b_to_a": [
+        [
+          1.0760181813587175,
+          0.02332615271252729,
+          249.4094439111566
+        ],
+        [
+          0.07241849608133838,
+          1.092634146309891,
+          -51.560519421110214
+        ],
+        [
+          -2.781817046572328e-06,
+          3.407593929973761e-05,
+          0.9985584661451643
+        ]
+      ],
+      "panorama_width": 1043,
+      "panorama_height": 1914,
+      "overlap_pixels": 794390,
+      "overlap_mae_raw": 1.0003763894308841,
+      "overlap_mae_corrected": 1.0003763894308841,
+      "exposure_gain_bgr": [
+        1.0005550503509897,
+        1.0004055515128103,
+        1.0006009497946675
+      ],
+      "exposure_bias_bgr": [
+        -0.07198004600404657,
+        -0.04652669253996319,
+        -0.09445356764780989
+      ],
+      "bounds_xyxy": [
+        0,
+        -52,
+        1042,
+        1861
+      ],
+      "displayed_inlier_matches": 80
+    }
+  ],
+  "validation": {
+    "all_cases_have_at_least_four_inliers": true,
+    "all_inlier_ratios_above_80_percent": true,
+    "all_corner_rmse_below_2px": true,
+    "all_inlier_rmse_below_2px": true,
+    "brightness_overlap_mae_reduced": true
+  },
+  "limitations": [
+    "从单张插画模拟重叠视图，不能评价真实拍摄的视差、运动或遮挡。",
+    "几何误差单位为A的工作分辨率像素；已知变换仅用于评价。",
+    "无独立多视角真值；重叠MAE仅描述两幅对齐图之间的亮度差。"
+  ]
+}
