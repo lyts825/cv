@@ -56,3 +56,30 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r exp3/requirements.txt
 .\.venv\Scripts\python.exe exp3/experiment.py
 ```
+
+## 实验四：多层感知机
+
+使用完整 MNIST 训练集分别训练基础 MLP 和改进 MLP，各训练 10 轮。基础模型使用 `784 → 128 → 10`、ReLU 和 SGD；改进模型使用 `784 → 256 → 128 → 64 → 10`，加入 BatchNorm、GELU、Dropout 和 Adam。
+
+![基础模型与改进模型的训练损失和测试准确率](exp4/result/comparison.png)
+
+本次测试准确率从 `90.37%` 提高到 `98.01%`，误分类从 963 张降至 199 张。两组同时改变多项配置，结果反映整体配置差异，各因素的独立作用尚未验证。
+
+- [实验四报告](exp4/readme.md)
+- [基础模型 Notebook](exp4/code.ipynb)
+- [改进模型 Notebook](exp4/code+.ipynb)
+- [可运行源码](exp4/experiment.py)
+- [实验指标](exp4/result/metrics.csv)
+
+在仓库根目录运行（Python 3.12，Windows PowerShell）。本实验使用单独的虚拟环境：
+
+```powershell
+python -m venv .venv-exp4
+.\.venv-exp4\Scripts\python.exe -m pip install torch==2.14.0 torchvision==0.29.0 --index-url https://download.pytorch.org/whl/cu126
+.\.venv-exp4\Scripts\python.exe -m pip install -r exp4/requirements.txt
+.\.venv-exp4\Scripts\python.exe exp4/experiment.py
+```
+
+上述安装命令适用于支持 CUDA 12.6 的 NVIDIA 环境。CPU 环境可将 PyTorch 安装命令中的索引改为 `https://download.pytorch.org/whl/cpu`，然后运行 `exp4/experiment.py --device cpu`。首次运行下载 MNIST 到 `exp4/.local/data`，之后复用缓存。依赖安装方式见 [PyTorch 官方说明](https://pytorch.org/get-started/locally/)。
+
+单独训练时使用 `--model baseline` 或 `--model improved`。两组公共配置一致时自动生成对比图。Notebook 默认展示已有训练记录并重新加载权重核对预测；将其中的 `RETRAIN` 设为 `True` 可重新训练。命令行可从任意目录用脚本绝对路径运行，Notebook 从仓库根目录或 `exp4` 目录启动。

@@ -1,5 +1,7 @@
 /.venv/
+/.venv-exp4/
 /exp2/.local/
 /exp3/.local/
+/exp4/.local/
 **/__pycache__/
 **/.ipynb_checkpoints/

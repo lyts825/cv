@@ -1,0 +1,161 @@
+{
+  "version": "0.3.0",
+  "model": "improved",
+  "seed": 2026,
+  "epochs": 10,
+  "batch_size": 2048,
+  "train_samples": 60000,
+  "test_samples": 10000,
+  "device": "cuda",
+  "environment": {
+    "python": "3.12.10",
+    "torch": "2.14.0+cu126",
+    "torchvision": "0.29.0+cu126",
+    "numpy": "2.4.4",
+    "matplotlib": "3.10.9",
+    "cuda": "12.6",
+    "gpu": "NVIDIA GeForce RTX 4090 Laptop GPU"
+  },
+  "dataset_sha256": {
+    "train-images-idx3-ubyte": "ba891046e6505d7aadcbbe25680a0738ad16aec93bde7f9b65e87a2fc25776db",
+    "train-labels-idx1-ubyte": "65a50cbbf4e906d70832878ad85ccda5333a97f0f4c3dd2ef09a8a9eef7101c5",
+    "t10k-images-idx3-ubyte": "0fa7898d509279e482958e8ce81c8e77db3f2f8254e26661ceb7762c4d494ce7",
+    "t10k-labels-idx1-ubyte": "ff7bcfd416de33731a308c3f266cc351222c34898ecbeaf847f06e48f7ec33f2"
+  },
+  "parameters": 243658,
+  "architecture": "ImprovedMLP(\n  (fc1): Linear(in_features=784, out_features=256, bias=True)\n  (bn1): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)\n  (fc2): Linear(in_features=256, out_features=128, bias=True)\n  (bn2): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)\n  (fc3): Linear(in_features=128, out_features=64, bias=True)\n  (bn3): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=True)\n  (fc4): Linear(in_features=64, out_features=10, bias=True)\n  (drop): Dropout(p=0.3, inplace=False)\n  (act): GELU(approximate='none')\n)",
+  "optimizer": {
+    "name": "Adam",
+    "learning_rate": 0.001
+  },
+  "metrics": {
+    "test_loss": 0.06767566871643066,
+    "test_accuracy": 0.9801,
+    "correct": 9801,
+    "incorrect": 199,
+    "macro_f1": 0.9799711885908697
+  },
+  "confusion_matrix": [
+    [
+      967,
+      0,
+      1,
+      1,
+      0,
+      2,
+      5,
+      1,
+      1,
+      2
+    ],
+    [
+      0,
+      1125,
+      3,
+      1,
+      0,
+      1,
+      2,
+      1,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      1013,
+      1,
+      1,
+      1,
+      2,
+      6,
+      7,
+      1
+    ],
+    [
+      0,
+      0,
+      2,
+      993,
+      0,
+      4,
+      0,
+      4,
+      4,
+      3
+    ],
+    [
+      0,
+      0,
+      1,
+      1,
+      955,
+      0,
+      6,
+      2,
+      0,
+      17
+    ],
+    [
+      2,
+      0,
+      0,
+      4,
+      0,
+      878,
+      4,
+      1,
+      1,
+      2
+    ],
+    [
+      5,
+      3,
+      2,
+      0,
+      3,
+      5,
+      940,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      6,
+      13,
+      1,
+      0,
+      0,
+      0,
+      1000,
+      1,
+      6
+    ],
+    [
+      4,
+      0,
+      2,
+      4,
+      3,
+      8,
+      2,
+      3,
+      943,
+      5
+    ],
+    [
+      2,
+      2,
+      0,
+      6,
+      5,
+      1,
+      1,
+      4,
+      1,
+      987
+    ]
+  ],
+  "model_sha256": "7a3afb94c29588b9ace8fd801a774714292fff85671cd1993e1ba2e99fd67463"
+}
